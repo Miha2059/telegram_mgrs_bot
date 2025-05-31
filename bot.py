@@ -191,6 +191,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 def main():
+    print(f"TOKEN: {TOKEN}")  # Вивід токена в лог для перевірки
     if not TOKEN:
         print("Помилка: не заданий TOKEN. Встанови змінну середовища TOKEN у файлі .env")
         return
@@ -204,6 +205,7 @@ def main():
 
     print("Бот запущений...")
     app.run_polling()
+
 
 if __name__ == "__main__":
     main()
